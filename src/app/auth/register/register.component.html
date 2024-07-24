@@ -1,0 +1,36 @@
+<div class="main">
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="Register()">
+        <h3>Register Here</h3>
+        <div class="row">
+            <div class="col-6 p-2">
+                <label for="username">Name</label>
+                <input type="text" placeholder="Enter Name" id="username" formControlName="name">
+            </div>
+            <div class="col-6 p-2">
+                <label for="username">Email</label>
+                <input type="email" placeholder="Enter Email" id="username" formControlName="email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 p-2">
+                <label for="username">Username</label>
+                <input type="text" placeholder="Enter Username" id="username" formControlName="userId">
+            </div>
+            <div class="col-6 p-2">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter Password" id="password" formControlName="password">
+            </div>
+        </div>
+
+
+
+        <button class="text-dark">Register</button>
+        <div class="d-flex justify-content-end py-3">
+            <a class="" style="cursor: pointer; " [routerLink]="['/auth/login']">Login here</a>
+        </div>
+    </form>
+</div>

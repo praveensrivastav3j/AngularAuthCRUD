@@ -1,0 +1,20 @@
+<div class="main">
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="Login()">
+        <h3>Login Here</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username" formControlName="userId">
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" formControlName="password">
+
+        <button class="text-dark">Log In</button>
+        <div class="d-flex justify-content-end py-3">
+            <a class="" style="cursor: pointer; " [routerLink]="['/auth/register']">Register here</a>
+        </div>
+    </form>
+</div>
